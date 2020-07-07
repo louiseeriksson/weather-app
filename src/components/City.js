@@ -7,7 +7,8 @@ export const City = ({ weather }) => {
   return (
     <main>
       <h1>{weather.name}</h1>
-      <p>Long: {weather.coord.lon} Lat: {weather.coord.lat}</p>
+      {weather.coord &&
+        <p>Long: {weather.coord.lon}, Lat: {weather.coord.lat}</p>}
     </main>
   )
 }
