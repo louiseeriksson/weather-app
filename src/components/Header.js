@@ -2,10 +2,11 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <div>
+    <header>
       <h2>
         Todays weather in:
       </h2>
-    </div>
+      {/* maybe remove the whole component */}
+    </header>
   )
 }

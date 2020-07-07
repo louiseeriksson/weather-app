@@ -5,10 +5,10 @@ export const City = ({ weather }) => {
 
 
   return (
-    <main>
-      <h1>{weather.name}</h1>
+    <header className='city-wrapper'>
+      <h1 className='city-name'>{weather.name}</h1>
       {weather.coord &&
-        <p>Long: {weather.coord.lon}, Lat: {weather.coord.lat}</p>}
-    </main>
+        <p className='coordinates'>Long: {weather.coord.lon}, Lat: {weather.coord.lat}</p>}
+    </header>
   )
 }

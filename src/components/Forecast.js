@@ -3,7 +3,6 @@ import React from 'react'
 export const Forecast = ({ forecast }) => {
   return (
     <div>
-      <h3>forecast:</h3>
       <h3>
         {forecast.list &&
           `${new Date(forecast.list.filter(item => item.dt_txt.includes('12:00'))[0].dt_txt.replace(" ", "T")).toLocaleDateString('en-US', { weekday: "short" })} : ${Math.round(forecast.list.filter(item => item.dt_txt.includes('12:00'))[0].main.temp)}º C, ${forecast.list.filter(item => item.dt_txt.includes('12:00'))[0].weather[0].description}`}

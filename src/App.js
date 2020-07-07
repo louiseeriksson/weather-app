@@ -35,7 +35,6 @@ export const App = () => {
 
   return (
     <div>
-      <Header />
       <City weather={weather} />
       <TodaysWeather weather={weather} />
       <Forecast forecast={forecast} />
