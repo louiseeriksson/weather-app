@@ -21,7 +21,7 @@ export const App = () => {
       .then(JSON => {
         setWeather(JSON)
       })
-  }, [])
+  }, [WEATHER_URL])
 
   useEffect(() => {
     fetch(FORECAST_URL)
@@ -31,7 +31,7 @@ export const App = () => {
       .then(JSON => {
         setForecast(JSON)
       })
-  }, [])
+  }, [FORECAST_URL])
 
   return (
     <div>
