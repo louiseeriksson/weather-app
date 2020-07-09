@@ -27,7 +27,7 @@ export const City = ({ city, setCity, weather }) => {
         {/* <h1 className='city-name'>{weather.name}</h1> */}
 
         {weather.coord &&
-          <p className='coordinates'>Lat: {weather.coord.lat}, Long: {weather.coord.lon}</p>}
+          <p className='coordinates'>Lat: {weather.coord.lat}, Lon: {weather.coord.lon}</p>}
       </div>
     </header>
   )

@@ -2,6 +2,9 @@ import React from 'react'
 
 export const TodaysWeather = ({ weather }) => {
 
+  console.log(weather);
+
+
   const today = new Date()
   const monthNames = [
     "Jan", "Feb", "Mar",
@@ -31,11 +34,15 @@ export const TodaysWeather = ({ weather }) => {
 
       <div className='temp-details-wrapper'>
         <div className='temp-wrapper'>
+
+          {weather.weather &&
+            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="weathericon" />}
+
           <h3>
-            {/* add icon for weatherdescription */}
-            {weather.main &&
+            {weather.weather &&
               `${weather.weather[0].description}`}
           </h3>
+
           <div className='temp-celsius-wrapper'>
             <h3 className='temp'>
               {weather.main &&
