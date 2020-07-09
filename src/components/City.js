@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export const City = ({ city, setCity, weather }) => {
   console.log(city);
