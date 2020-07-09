@@ -8,25 +8,24 @@ export const City = ({ city, setCity, weather }) => {
 
   return (
     <header>
-      <div className='hamburger-menu'>
+      {/* <div className='hamburger-menu'>
         <div className='burger-line'></div>
         <div className='burger-line'></div>
         <div className='burger-line'></div>
-      </div>
+      </div> */}
       <div className='city-wrapper'>
 
-        <form onSubmit={(event) => event.preventDefault}>
-          <p>
-            {city &&
-              `state is: ${city}`}
-          </p>
+        <form onSubmit={(event) => event.preventDefault()}>
+
           <input
             type='text'
             onChange={(event) => setCity(event.target.value)}
-            value={city} />
+            value={city}
+            placeholder={city} />
         </form>
 
-        <h1 className='city-name'>{weather.name}</h1>
+        {/* <h1 className='city-name'>{weather.name}</h1> */}
+
         {weather.coord &&
           <p className='coordinates'>Long: {weather.coord.lon}, Lat: {weather.coord.lat}</p>}
       </div>

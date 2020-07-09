@@ -21,7 +21,7 @@ export const TodaysWeather = ({ weather }) => {
 
       <p className='detail-text'>
         {month &&
-          `${monthNames[month]} ${date}, ${hour}:${minute} AM`}
+          `${monthNames[month]} ${date}, ${hour}:${minute}`}
       </p>
 
       <p className='sun'>
