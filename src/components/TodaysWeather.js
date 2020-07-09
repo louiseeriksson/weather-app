@@ -22,10 +22,10 @@ export const TodaysWeather = ({ weather }) => {
       {/* add icons instead of sunrise/sunset */}
       {/* AM/PM time? */}
 
-      <p className='detail-text'>
+      {/* <p className='detail-text'>
         {month &&
           `${monthNames[month]} ${date}, ${hour}:${minute}`}
-      </p>
+      </p> */}
 
       <p className='sun'>
         {weather.sys &&
@@ -57,7 +57,7 @@ export const TodaysWeather = ({ weather }) => {
             <p className='detail-text'>Feels like: </p>
             <p>
               {weather.main &&
-                `${Math.round(weather.main.feels_like)}ºC`}
+                `${Math.round(weather.main.feels_like)}º`}
             </p>
           </div>
           <div className='border'></div>

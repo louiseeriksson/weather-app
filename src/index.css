@@ -149,14 +149,20 @@ input:focus {
   margin-bottom: 7px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .forecast-section img {
   height: 30px;
   width: 30px;
+  margin: 0 5px;
+}
+
+.forecast-border {
+  width: 100%;
+  margin: 26px 0 20px 0;
 }
 
 footer .forecast-border {
-width: 100%;
 margin: 26px 0 70px 0;
 }
