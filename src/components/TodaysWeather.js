@@ -3,6 +3,13 @@ import React from 'react'
 export const TodaysWeather = ({ weather }) => {
 
   const today = new Date()
+
+  const monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+  ]
   const month = today.getMonth()
   const date = today.getDate()
   const hour = today.getHours()
@@ -13,30 +20,8 @@ export const TodaysWeather = ({ weather }) => {
       {/* add icons instead of sunrise/sunset */}
 
       <p className='detail-text'>
-        {month === 1 &&
-          `Jan ${date}, ${hour}:${minute} AM`}
-        {month === 2 &&
-          `Feb ${date}, ${hour}:${minute} AM`}
-        {month === 3 &&
-          `Mar ${date}, ${hour}:${minute} AM`}
-        {month === 4 &&
-          `Apr ${date}, ${hour}:${minute} AM`}
-        {month === 5 &&
-          `May ${date}, ${hour}:${minute} AM`}
-        {month === 6 &&
-          `June ${date}, ${hour}:${minute} AM`}
-        {month === 7 &&
-          `July ${date}, ${hour}:${minute} AM`}
-        {month === 8 &&
-          `Aug ${date}, ${hour}:${minute} AM`}
-        {month === 9 &&
-          `Sep ${date}, ${hour}:${minute} AM`}
-        {month === 10 &&
-          `Oct ${date}, ${hour}:${minute} AM`}
-        {month === 11 &&
-          `Nov ${date}, ${hour}:${minute} AM`}
-        {month === 12 &&
-          `Dec ${date}, ${hour}:${minute} AM`}
+        {month &&
+          `${monthNames[month]} ${date}, ${hour}:${minute} AM`}
       </p>
 
       <p className='sun'>
