@@ -3,12 +3,11 @@ import React from 'react'
 export const TodaysWeather = ({ weather }) => {
 
   const today = new Date()
-
   const monthNames = [
-    "January", "February", "March",
-    "April", "May", "June", "July",
-    "August", "September", "October",
-    "November", "December"
+    "Jan", "Feb", "Mar",
+    "Apr", "May", "June", "July",
+    "Aug", "Sep", "Oct",
+    "Nov", "Dec"
   ]
   const month = today.getMonth()
   const date = today.getDate()
@@ -18,6 +17,7 @@ export const TodaysWeather = ({ weather }) => {
   return (
     <div className='todays-weather'>
       {/* add icons instead of sunrise/sunset */}
+      {/* AM/PM time? */}
 
       <p className='detail-text'>
         {month &&
@@ -50,7 +50,7 @@ export const TodaysWeather = ({ weather }) => {
             <p className='detail-text'>Feels like: </p>
             <p>
               {weather.main &&
-                `${weather.main.feels_like}ºC`}
+                `${Math.round(weather.main.feels_like)}ºC`}
             </p>
           </div>
           <div className='border'></div>

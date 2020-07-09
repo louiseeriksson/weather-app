@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const City = ({ city, weather }) => {
-  console.log(weather);
+export const City = ({ city, setCity, weather }) => {
+  console.log(city);
+
+  // Maybe remove hamburger menu and make the city name clickable to input city if your choice
 
 
   return (
@@ -12,6 +14,18 @@ export const City = ({ city, weather }) => {
         <div className='burger-line'></div>
       </div>
       <div className='city-wrapper'>
+
+        <form onSubmit={(event) => event.preventDefault}>
+          <p>
+            {city &&
+              `state is: ${city}`}
+          </p>
+          <input
+            type='text'
+            onChange={(event) => setCity(event.target.value)}
+            value={city} />
+        </form>
+
         <h1 className='city-name'>{weather.name}</h1>
         {weather.coord &&
           <p className='coordinates'>Long: {weather.coord.lon}, Lat: {weather.coord.lat}</p>}

@@ -36,7 +36,7 @@ export const App = () => {
 
   return (
     <div>
-      <City city={city} weather={weather} />
+      <City city={city} setCity={setCity} weather={weather} />
       <TodaysWeather weather={weather} />
       <Forecast forecast={forecast} />
       <Footer />
