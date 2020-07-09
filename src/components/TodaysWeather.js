@@ -5,17 +5,17 @@ export const TodaysWeather = ({ weather }) => {
   console.log(weather);
 
 
-  const today = new Date()
-  const monthNames = [
-    "Jan", "Feb", "Mar",
-    "Apr", "May", "June", "July",
-    "Aug", "Sep", "Oct",
-    "Nov", "Dec"
-  ]
-  const month = today.getMonth()
-  const date = today.getDate()
-  const hour = today.getHours()
-  const minute = today.getMinutes()
+  // const today = new Date()
+  // const monthNames = [
+  //   "Jan", "Feb", "Mar",
+  //   "Apr", "May", "June", "July",
+  //   "Aug", "Sep", "Oct",
+  //   "Nov", "Dec"
+  // ]
+  // const month = today.getMonth()
+  // const date = today.getDate()
+  // const hour = today.getHours()
+  // const minute = today.getMinutes()
 
   return (
     <div className='todays-weather'>
