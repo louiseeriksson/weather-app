@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div></div>
+    <footer>
+      <div className='forecast-border'></div>
+    </footer>
   )
 }

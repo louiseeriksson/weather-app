@@ -147,3 +147,8 @@ input:focus {
   align-self: center;
   margin-bottom: 4px;
 }
+
+footer .forecast-border {
+width: 100%;
+margin: 26px 0 70px 0;
+}
