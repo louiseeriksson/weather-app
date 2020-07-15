@@ -2,16 +2,8 @@ import React from 'react'
 
 export const Forecast = ({ forecast }) => {
 
-  console.log(forecast);
-
-
   return (
     <div className='forecast-section'>
-
-      <div className='forecast-wrapper'>
-        {/* <h3 className='forecast'>NEXT 5 DAYS</h3>
-        <div className='forecast-border'></div> */}
-      </div>
 
       <div className='forecast-border'></div>
 
@@ -93,6 +85,7 @@ export const Forecast = ({ forecast }) => {
             `${forecast.list.filter(item => item.dt_txt.includes('12:00'))[4].weather[0].description}`}
         </h3>
       </div>
+
     </div>
   )
 }

@@ -10,6 +10,7 @@ export const App = () => {
   const [city, setCity] = useState('Stockholm')
   const [weather, setWeather] = useState({})
   const [forecast, setForecast] = useState({})
+
   const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city},Sweden&units=metric&APPID=b09042e161870e44988114035ff61156`
   const FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${city},Sweden&units=metric&APPID=b09042e161870e44988114035ff61156`
 

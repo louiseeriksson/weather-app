@@ -2,30 +2,8 @@ import React from 'react'
 
 export const TodaysWeather = ({ weather }) => {
 
-  console.log(weather);
-
-
-  // const today = new Date()
-  // const monthNames = [
-  //   "Jan", "Feb", "Mar",
-  //   "Apr", "May", "June", "July",
-  //   "Aug", "Sep", "Oct",
-  //   "Nov", "Dec"
-  // ]
-  // const month = today.getMonth()
-  // const date = today.getDate()
-  // const hour = today.getHours()
-  // const minute = today.getMinutes()
-
   return (
     <div className='todays-weather'>
-      {/* add icons instead of sunrise/sunset */}
-      {/* AM/PM time? */}
-
-      {/* <p className='detail-text'>
-        {month &&
-          `${monthNames[month]} ${date}, ${hour}:${minute}`}
-      </p> */}
 
       <p className='sun'>
         {weather.sys &&
@@ -33,8 +11,8 @@ export const TodaysWeather = ({ weather }) => {
       </p>
 
       <div className='temp-details-wrapper'>
-        <div className='temp-wrapper'>
 
+        <div className='temp-wrapper'>
           {weather.weather &&
             <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="weathericon" />}
 
@@ -48,6 +26,7 @@ export const TodaysWeather = ({ weather }) => {
               {weather.main &&
                 `${Math.round(weather.main.temp)}`}
             </h3>
+
             <h3 className='celsius'>º</h3>
           </div>
         </div>
@@ -69,6 +48,7 @@ export const TodaysWeather = ({ weather }) => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
   )
